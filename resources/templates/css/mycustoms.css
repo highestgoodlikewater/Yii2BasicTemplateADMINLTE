@@ -1,0 +1,22 @@
+h3.box-title {
+    font-size: 25px !important;
+    padding-top: 5px;
+    float: left;
+    margin-right: 10px !important;
+}
+.sidebar-menu .treeview-menu>li
+{
+	margin-left:20px;
+}
+.sidebar-menu .treeview-menu>li>ul>li
+{
+	margin-left:5px;
+}
+input.capslock
+{
+	text-transform:capitalize;
+}
+span.tag.label.label-info
+{
+	background-color : #3c8dbc !important;
+}
