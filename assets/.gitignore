@@ -1,2 +1,5 @@
 *
 !.gitignore
+!AppAsset.php
+!DashboardAsset.php
+!LoginAsset.php

@@ -23,3 +23,13 @@ span.tag.label.label-info
 .select2-container .select2-selection--single .select2-selection__rendered{
 	 margin-top: -7px;
 }
+section.content-header{
+    box-shadow: 0px 0px 5px #888888;
+}
+footer.main-footer{
+    box-shadow: 0px 0px 5px #888888;
+}
+ul.dropdown-menu li div.slimScrollDiv
+, li.dropdown.notifications-menu ul.dropdown-menu li ul.menu{
+	 height: 100% !important;
+}

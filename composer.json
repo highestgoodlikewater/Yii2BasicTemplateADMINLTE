@@ -20,6 +20,7 @@
         "yiisoft/yii2-swiftmailer": "*",
 		"kartik-v/yii2-grid": "@dev",
 		"kartik-v/yii2-mpdf": "*",
+		"kartik-v/yii2-editable": "@dev",
 		"dektrium/yii2-user": "*",
 		"fedemotta/yii2-cronjob": "*",
 		"dektrium/yii2-rbac": "dev-master",
@@ -27,8 +28,17 @@
 		"miloschuman/yii2-highcharts-widget": "*",
 		"2amigos/yii2-highcharts-widget" : "~1.0",
 		"ho96/yii2-extplorer": "dev-master",
-		"kartik-v/yii2-editable": "@dev"
+		"ibrarturi/yii2-latlng-finder": "dev-master",
+		"julian-b90/yii2-seomanager": "*",
+		"sfedosimov/yii2-daysago": "*",
+		"giovdk21/yii2-syntaxhighlighter": "dev-master"
     },
+	"repositories": [
+		{
+			"type": "vcs",
+			"url": "https://github.com/sfedosimov/yii2-daysago.git"
+		}
+	],
     "require-dev": {
         "yiisoft/yii2-codeception": "*",
         "yiisoft/yii2-debug": "*",
@@ -37,6 +47,7 @@
 		"kartik-v/yii2-krajee-base": "@dev"
     },
     "config": {
+		"vendor-dir":"../yii2-vendor",
         "process-timeout": 1800
     },
     "scripts": {

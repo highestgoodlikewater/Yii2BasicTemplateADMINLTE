@@ -3,6 +3,10 @@ $menus = require(__DIR__ . '/static-menus.php');
 
 return [
     'adminEmail' => 'admin@example.com',
+	'languages'=>[
+		'id' => 'Bahasa',
+		'en' => 'English',
+	],
 	'vendor'=>[
 		'author'=>'Suhendra Y Putra',
 		'authorurl'=>'javascript:void(0)',

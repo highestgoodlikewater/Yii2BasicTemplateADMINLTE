@@ -1,3 +1,6 @@
+<?php
+	//$this->params['breadcrumbs'][] = '';
+?>
 <div class="row">
 	<?= $this->render( '_pages/_income_summary', 
 			[

@@ -4,8 +4,8 @@
         "Read more about it at https://getcomposer.org/doc/01-basic-usage.md#composer-lock-the-lock-file",
         "This file is @generated automatically"
     ],
-    "hash": "945c0f548a0581af5ae5a45ce3f251b6",
-    "content-hash": "943e440583f37ecc4ea82af1ef70aa41",
+    "hash": "17fa23cf82e12a9b98e4284a0a51d622",
+    "content-hash": "eb63260cf92de8f759073361c325fc5e",
     "packages": [
         {
             "name": "2amigos/yii2-highcharts-widget",
@@ -627,6 +627,47 @@
             "time": "2015-10-07 20:47:12"
         },
         {
+            "name": "giovdk21/yii2-syntaxhighlighter",
+            "version": "dev-master",
+            "source": {
+                "type": "git",
+                "url": "https://github.com/giovdk21/yii2-syntaxhighlighter.git",
+                "reference": "9407b70cb2f53ca051efc54c30b1b255721b80bb"
+            },
+            "dist": {
+                "type": "zip",
+                "url": "https://api.github.com/repos/giovdk21/yii2-syntaxhighlighter/zipball/9407b70cb2f53ca051efc54c30b1b255721b80bb",
+                "reference": "9407b70cb2f53ca051efc54c30b1b255721b80bb",
+                "shasum": ""
+            },
+            "require": {
+                "php": ">=5.4.0",
+                "yiisoft/yii2": "*"
+            },
+            "type": "yii2-extension",
+            "autoload": {
+                "psr-4": {
+                    "giovdk21\\yii2SyntaxHighlighter\\": ""
+                }
+            },
+            "notification-url": "https://packagist.org/downloads/",
+            "license": [
+                "MIT License"
+            ],
+            "authors": [
+                {
+                    "name": "Giovanni Derks",
+                    "homepage": "http://derks.me.uk/"
+                }
+            ],
+            "description": "Syntax Highlighter for Yii 2",
+            "keywords": [
+                "SyntaxHighlighter",
+                "yii2"
+            ],
+            "time": "2014-11-02 18:53:38"
+        },
+        {
             "name": "ho96/yii2-extplorer",
             "version": "dev-master",
             "source": {
@@ -667,6 +708,94 @@
                 "file manager"
             ],
             "time": "2015-11-08 23:46:13"
+        },
+        {
+            "name": "ibrarturi/yii2-latlng-finder",
+            "version": "dev-master",
+            "source": {
+                "type": "git",
+                "url": "https://github.com/ibrarturi/yii2-latlon-finder.git",
+                "reference": "7c6b0bafdf16d42bbdf294a83eb3df1d5f1ca134"
+            },
+            "dist": {
+                "type": "zip",
+                "url": "https://api.github.com/repos/ibrarturi/yii2-latlon-finder/zipball/7c6b0bafdf16d42bbdf294a83eb3df1d5f1ca134",
+                "reference": "7c6b0bafdf16d42bbdf294a83eb3df1d5f1ca134",
+                "shasum": ""
+            },
+            "require": {
+                "yiisoft/yii2": "*"
+            },
+            "type": "yii2-extension",
+            "autoload": {
+                "psr-4": {
+                    "ibrarturi\\latlngfinder\\": ""
+                }
+            },
+            "notification-url": "https://packagist.org/downloads/",
+            "license": [
+                "MIT"
+            ],
+            "authors": [
+                {
+                    "name": "Ibrar Turi",
+                    "email": "ibrarturi@gmail.com"
+                }
+            ],
+            "description": "Find Latitude and Longitude using google maps",
+            "keywords": [
+                "coordinates",
+                "extension",
+                "finder",
+                "google map",
+                "latitude",
+                "longitude",
+                "picker",
+                "yii2"
+            ],
+            "time": "2015-12-17 10:25:24"
+        },
+        {
+            "name": "julian-b90/yii2-seomanager",
+            "version": "0.0.3",
+            "source": {
+                "type": "git",
+                "url": "https://github.com/Julian-B90/yii2-seomanager.git",
+                "reference": "d9c512a5d66db68ac9eba866ffd0bee067b14388"
+            },
+            "dist": {
+                "type": "zip",
+                "url": "https://api.github.com/repos/Julian-B90/yii2-seomanager/zipball/d9c512a5d66db68ac9eba866ffd0bee067b14388",
+                "reference": "d9c512a5d66db68ac9eba866ffd0bee067b14388",
+                "shasum": ""
+            },
+            "require": {
+                "yiisoft/yii2": "*"
+            },
+            "type": "yii2-extension",
+            "autoload": {
+                "psr-4": {
+                    "julianb90\\seomanager\\": ""
+                }
+            },
+            "notification-url": "https://packagist.org/downloads/",
+            "license": [
+                "MIT"
+            ],
+            "authors": [
+                {
+                    "name": "Julian Böhnke",
+                    "email": "tr@julianb.de"
+                }
+            ],
+            "description": "Seo Manager for every Site",
+            "keywords": [
+                "extension",
+                "seo",
+                "seomanager",
+                "yii2"
+            ],
+            "time": "2015-12-10 20:57:29"
         },
         {
             "name": "kartik-v/bootstrap-popover-x",
@@ -809,12 +938,12 @@
             "source": {
                 "type": "git",
                 "url": "https://github.com/kartik-v/yii2-grid.git",
-                "reference": "9b41c992b445557a2475af2d29cafab80c45540a"
+                "reference": "5e190a82c628d96edd94635989af542e438890f6"
             },
             "dist": {
                 "type": "zip",
-                "url": "https://api.github.com/repos/kartik-v/yii2-grid/zipball/9b41c992b445557a2475af2d29cafab80c45540a",
-                "reference": "9b41c992b445557a2475af2d29cafab80c45540a",
+                "url": "https://api.github.com/repos/kartik-v/yii2-grid/zipball/5e190a82c628d96edd94635989af542e438890f6",
+                "reference": "5e190a82c628d96edd94635989af542e438890f6",
                 "shasum": ""
             },
             "require": {
@@ -845,7 +974,7 @@
                 "widget",
                 "yii2"
             ],
-            "time": "2015-12-09 13:34:33"
+            "time": "2015-12-30 03:33:17"
         },
         {
             "name": "kartik-v/yii2-krajee-base",
@@ -1080,6 +1209,52 @@
                 "yii2"
             ],
             "time": "2015-12-14 18:02:44"
+        },
+        {
+            "name": "sfedosimov/yii2-daysago",
+            "version": "v1.0.0.0",
+            "source": {
+                "type": "git",
+                "url": "https://github.com/sfedosimov/yii2-daysago.git",
+                "reference": "041d70387b7960a053cb38ff75c9ba9e94c3eafa"
+            },
+            "dist": {
+                "type": "zip",
+                "url": "https://api.github.com/repos/sfedosimov/yii2-daysago/zipball/041d70387b7960a053cb38ff75c9ba9e94c3eafa",
+                "reference": "041d70387b7960a053cb38ff75c9ba9e94c3eafa",
+                "shasum": ""
+            },
+            "require": {
+                "yiisoft/yii2": "*"
+            },
+            "type": "yii2-extension",
+            "autoload": {
+                "psr-4": {
+                    "sfedosimov\\daysago\\": ""
+                }
+            },
+            "license": [
+                "MIT"
+            ],
+            "authors": [
+                {
+                    "name": "Sergey Fedosimov",
+                    "email": "sfedosimov@gmail.com"
+                }
+            ],
+            "description": "DaysAgo - Converter of time in user-friendly format",
+            "keywords": [
+                "daysago",
+                "extension",
+                "timeago",
+                "yii2"
+            ],
+            "support": {
+                "email": "sfedosimov@gmail.com",
+                "issues": "https://github.com/sfedosimov/yii2-daysago/issues",
+                "source": "https://github.com/sfedosimov/yii2-daysago/tree/v1.0.0.0"
+            },
+            "time": "2015-12-08 06:40:30"
         },
         {
             "name": "swiftmailer/swiftmailer",
@@ -1779,9 +1954,11 @@
     "minimum-stability": "stable",
     "stability-flags": {
         "kartik-v/yii2-grid": 20,
+        "kartik-v/yii2-editable": 20,
         "dektrium/yii2-rbac": 20,
         "ho96/yii2-extplorer": 20,
-        "kartik-v/yii2-editable": 20,
+        "ibrarturi/yii2-latlng-finder": 20,
+        "giovdk21/yii2-syntaxhighlighter": 20,
         "kartik-v/yii2-krajee-base": 20
     },
     "prefer-stable": false,

@@ -38,6 +38,18 @@ DashboardAsset::register($this);
 			<?php endif;?>
 			<div class="content-wrapper">
 				<section class="content-header">
+					<?php 
+					//$this->params['breadcrumbs'][] = ['label' => Yii::t('app', 'Bukutamus'), 'url' => ['index']];
+					//$this->params['breadcrumbs'][] = ['label' => 'Module Name', 'url' => ['view', 'id' => 1]];
+					//$this->params['breadcrumbs'][] = ['label' => '<i class="fa fa-dashboard"></i> Dashboard'];
+					
+					?>
+					<?= Breadcrumbs::widget([
+							'homeLink'=>isset($this->params['breadcrumbs']) ? ['label' => '<strong>You are at : </strong> Dashboard'] : false,
+							'options'=>['class' => 'breadcrumb'],
+							'encodeLabels'=>false,
+							'links' => isset($this->params['breadcrumbs']) ? $this->params['breadcrumbs'] : ['<strong>Welcome dude, today is '. date('d M Y').'</strong>'],
+        ]) ?>
 		        	<h1>
 						<?php echo (isset($this->params['_title'])?$this->params['_title']:Yii::$app->params['application']['name']) ?>
 						<small><?php echo (isset($this->params['_subtitle'])?$this->params['_subtitle']:'') ?></small>
@@ -63,9 +75,7 @@ DashboardAsset::register($this);
 							</ul>
 						</div>
 					<?php endif;?>
-					<ol class="breadcrumb">
-						<li><a href="#"><i class="fa fa-calendar"></i> <?php echo date("d M Y");?></a></li>
-					</ol>
+					
 				</section>
 		        <section class="content">
 					<?php echo  Yii::$app->awsalert->show(Yii::$app->session->getAllFlashes());?>

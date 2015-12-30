@@ -14,11 +14,11 @@ use yii\helpers\Html;
 <nav class="navbar navbar-static-top" role="navigation">
 	<div class="navbar-custom-menu">
             <ul class="nav navbar-nav">
-              <?php //echo  $this->render( 'topbar_dropdown', ['param'=> 'somevar'] ); ?>
+              <?php echo  $this->render( 'languages', ['param'=> 'somevar'] ); ?>
               <li class="dropdown user user-menu">
                 <a href="#" class="dropdown-toggle" data-toggle="dropdown">
 				<img class="user-image" src="http://www.gravatar.com/avatar/<?php echo md5(strtolower(Yii::$app->user->identity->email));?>" />
-                  <span class="hidden-xs">Hello 
+                  <span class="hidden-xs"><?php echo Yii::t('app','Halo');?> 
 				  <?php if (!Yii::$app->user->isGuest) :?>
 				  <?php  echo ucwords(strtolower(Yii::$app->user->identity->username)); ?>
 				  <?php endif;?>
