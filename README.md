@@ -17,7 +17,7 @@ DIRECTORY STRUCTURE
 
       assets/             contains assets definition
       commands/           contains console commands (controllers)
-      components/     contains components classes
+      components/         contains components classes
       config/             contains application configurations
       controllers/        contains Web controller classes
       mail/               contains view files for e-mails
@@ -28,9 +28,9 @@ DIRECTORY STRUCTURE
       views/              contains view files for the Web application
       web/                contains the entry script and Web resources
       resources/        contains the entry script and Web resources
-      modules/          contains application modules
-      migrations/       contains database changes
-      messages/        contains all translations
+      modules/             contains application modules
+      migrations/          contains database changes
+      messages/            contains all translations
 
 
 
