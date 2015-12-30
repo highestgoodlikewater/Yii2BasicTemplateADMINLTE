@@ -23,7 +23,8 @@ LoginAsset::register($this);
 <?php $this->beginBody() ?>
     <div class="login-box">
         <div class="login-logo">
-            <a href="../../index2.html"><b>Simple</b>SMS</a>
+            
+			<a href="<?php echo Url::base();?>asd"><b>Simple</b>SMS</a>
         </div><!-- /.login-logo -->
         <div class="login-box-body">
             <p class="login-box-msg">Sign in to start your session</p>

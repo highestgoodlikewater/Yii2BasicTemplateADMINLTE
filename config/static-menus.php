@@ -1,0 +1,106 @@
+<?php 
+	return [
+		[
+			'menu_id'=>'dashboard',
+			'menu_name'=>'Dashboard',
+			'menu_title'=>'Dashboard',
+			'menu_icon'=>'Dashboard',
+			'menu_url'=>'#1',
+			'menu_parent_id'=>NULL,
+			'submenu'=>[],
+		],
+		[
+			'menu_id'=>'settings',
+			'menu_name'=>'settings',
+			'menu_parent' => NULL,
+			'menu_title'=>'Pengaturan',
+			'menu_icon'=>'fa fa-gear',
+			'menu_url'=>'#',
+			'submenu'=>[
+				[
+					'parent_menu_name'=>'Master Data',
+					'menu_parent' => 'settings',
+					'menu_icon'=>'fa fa-map-marker',
+					'menu_url'=>'#',
+					'menu_action'=>'#',
+					'menu_id'=>'datamasters',
+					'submenu'=>[
+						[
+							'name'=>'Karyawan / Vendor',
+							'menu_id'=>'employees',
+							'menu_parent' => 'datamasters',
+							'menu_icon'=>'fa fa-link',
+							'url'=>'employees',
+							'submenu'=>[],
+						],
+						[
+							'name'=>'Layanan',
+							'menu_id'=>'services',
+							'menu_parent' => 'datamasters',
+							'menu_icon'=>'fa fa-link',
+							'url'=>'services',
+							'submenu'=>[],
+						],
+					],
+				],
+			],
+		],
+		[
+			'menu_id'=>'trans',
+			'menu_name'=>'Transaksi',
+			'menu_title'=>'Transaksi',
+			'menu_icon'=>'fa fa-users',
+			'menu_parent_id' => NULL,
+			'menu_url'=>'#',
+			'submenu'=>[
+				[
+					'menu_id'=>'transactions',
+					'parent_menu_name'=>'Transaksi',
+					'menu_parent'=>'trans',
+					'menu_icon'=>'fa fa-users',
+					'menu_url'=>'transactions',
+					'menu_action'=>['index','update','update-profile','info','assignments',],
+					'submenu'=>[],
+				],
+				[
+					'menu_id'=>'transactions',
+					'parent_menu_name'=>'Tambah Transaksi',
+					'menu_parent'=>'trans',
+					'menu_icon'=>'fa fa-users',
+					'menu_url'=>'transactions',
+					'menu_action'=>'create',
+					'submenu'=>[],
+				],
+			],
+		],
+		[
+			'menu_id'=>'user',
+			'menu_name'=>'Users',
+			'menu_title'=>'Pengguna',
+			'menu_icon'=>'fa fa-users',
+			'menu_parent_id' => NULL,
+			'menu_url'=>'#',
+			'submenu'=>[
+				[
+					'menu_id'=>'admin',
+					'parent_menu_name'=>'Pengguna',
+					'menu_parent'=>'user',
+					'menu_icon'=>'fa fa-users',
+					'menu_url'=>'admin',
+					'menu_action'=>['index','update','update-profile','info','assignments',],
+					'submenu'=>[],
+				],
+				[
+					'menu_id'=>'admin',
+					'parent_menu_name'=>'Tambah Pengguna',
+					'menu_parent'=>'user',
+					'menu_icon'=>'fa fa-user',
+					'menu_url'=>'admin',
+					'menu_action'=>'create',
+					'submenu'=>[],
+				],
+			],
+		],
+	]
+
+?>

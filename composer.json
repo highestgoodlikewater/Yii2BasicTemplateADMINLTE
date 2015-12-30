@@ -26,7 +26,8 @@
 		"et-soft/yii2-widget-select-year": "*",
 		"miloschuman/yii2-highcharts-widget": "*",
 		"2amigos/yii2-highcharts-widget" : "~1.0",
-		"ho96/yii2-extplorer": "dev-master"
+		"ho96/yii2-extplorer": "dev-master",
+		"kartik-v/yii2-editable": "@dev"
     },
     "require-dev": {
         "yiisoft/yii2-codeception": "*",

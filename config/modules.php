@@ -1,21 +1,22 @@
 <?php 
 	return [
-		'user' => [
-			'class' => 'dektrium\user\Module',
-			//'controllerMap' => [
-			//	'admin' => [
-					//'class'  => 'app\modules\configurations\users\controllers\UsersController',
-					//'layout' => 'app\views\layouts\main',
-			//	],
-			//],
-			'enableUnconfirmedLogin' => true,
-			'confirmWithin' => 21600,
-			'cost' => 12,
-			'admins' => ['suhendra']
+		'settings' => [
+            'class' => 'app\modules\settings\Settings',
+			'modules'=>[
+				'datamasters' => [
+					'class' => 'app\modules\settings\datamasters\Datamasters',
+				],
+				'regional' => [
+					'class' => 'app\modules\settings\regional\Regional',
+				],
+			]
         ],
-		'rbac' => [
-			'class' => 'dektrium\rbac\Module',
-		],
+		'trans' => [
+            'class' => 'app\modules\trans\Trans',
+        ],
+		'awscommerce' => [
+            'class' => 'app\modules\awscommerce\Awscommerce',
+        ],
 	]
 
 ?>

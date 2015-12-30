@@ -21,7 +21,7 @@ DashboardAsset::register($this);
     	<meta charset="<?= Yii::$app->charset ?>">
     	<meta name="viewport" content="width=device-width, initial-scale=1">
     	<?= Html::csrfMetaTags() ?>
-    	<title><?= Html::encode($this->title) ?></title>
+    	<title><?= Yii::$app->name.' :: '.Html::encode($this->title) ?></title>
     <?php $this->head() ?>
 	</head>
 	<body class="hold-transition skin-blue sidebar-mini fixed">
@@ -33,42 +33,44 @@ DashboardAsset::register($this);
 
 			<?php if (!Yii::$app->user->isGuest) :?>
 			<aside class="main-sidebar">
-				<?= $this->render( 'sidebar', ['adminmenus'=>Yii::$app->params['adminmenus']] ); ?>
+				<?= $this->render( 'sidebar-static', ['adminmenus'=>Yii::$app->params['adminmenus']] ); ?>
 			</aside>
 			<?php endif;?>
 			<div class="content-wrapper">
 				<section class="content-header">
 		        	<h1>
-						<?php echo (isset($this->params['moduleName'])?$this->params['moduleName']:'no title') ?>
-						<small><?php echo (isset($this->params['subModuleName'])?$this->params['subModuleName']:'') ?></small>
+						<?php echo (isset($this->params['_title'])?$this->params['_title']:Yii::$app->params['application']['name']) ?>
+						<small><?php echo (isset($this->params['_subtitle'])?$this->params['_subtitle']:'') ?></small>
 					</h1>
-		          	<ol class="breadcrumb">
-		            	<li>
-							<a href="#">
-								<i class="fa fa-calendar"></i> <?php echo date("d M Y");?></a>
-							</li>
-		            	<!--<li class="active">Dashboard</li> /-->
-		          	</ol>
-		        </section>
-		        <section class="content">
-					<?php if (isset($error)): ?>
-						<div class="alert alert-danger alert-dismissable">
-						<button type="button" class="close" data-dismiss="alert" aria-hidden="true">×</button>
-						<p><?php print_r($error); ?></p>
+					<br/>
+					<?php $show_map = FALSE;?>
+					<?php if ($show_map) :?>
+						<div class="alert alert-info alert-dismissable">
+							<?php 
+								$MODULE_OBJECT = Yii::$app->controller->module;
+								$module_name = (isset($MODULE_OBJECT->module->id)?$MODULE_OBJECT->module->id:'');
+								$controllers_name = (isset($MODULE_OBJECT->module->module->controller->id)?$MODULE_OBJECT->module->module->controller->id:'');
+								$submodule_name = $MODULE_OBJECT->id;
+								$cname = Yii::$app->controller->id;
+								$action = Yii::$app->controller->action->id;
+							?>
+							<ul>
+								<li>MODULE : <?php echo $module_name;?>
+								<li>SUBMODULES : <?php echo $submodule_name;?>
+								<li>CONTROLLER : <?php echo $controllers_name;?>
+								<li>CONTROLLER 2 : <?php echo $cname;?>
+								<li>METHOD : <?php echo $action;?>
+							</ul>
 						</div>
-					<?php endif; ?>
-					<?php $flashType = Yii::$app->session->getAllFlashes(); ?>
-					<?php if (sizeof($flashType)>0): ?>
-						<?php foreach ($flashType as $flashKey=>$flashValue): ?>
-									<div class="alert alert-<?php echo ($flashKey=='error'?'danger':$flashKey);?> alert-dismissable">
-									<button type="button" class="close" data-dismiss="alert" aria-hidden="true">×</button>
-								<p><?php echo Yii::$app->session->getFlash($flashKey); ?></p>
-							</div>
-						<?php endforeach;?>
-						<?php endif; ?>
-						
-	        	<?= $content ?>
-						</section>
+					<?php endif;?>
+					<ol class="breadcrumb">
+						<li><a href="#"><i class="fa fa-calendar"></i> <?php echo date("d M Y");?></a></li>
+					</ol>
+				</section>
+		        <section class="content">
+					<?php echo  Yii::$app->awsalert->show(Yii::$app->session->getAllFlashes());?>
+					<?= $content ?>
+				</section>
 			</div>
 			
 			<?php echo $this->render( 'footer-copyright', ['info'=> Yii::$app->params['vendor']] ); ?>

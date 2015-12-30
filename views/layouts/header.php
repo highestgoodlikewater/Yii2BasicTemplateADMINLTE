@@ -11,22 +11,16 @@ use yii\helpers\Html;
 	<?php echo $params['application']['mobile5050'];?>
 	<?php echo $params['application']['mobilename'];?>
 </a>
-    
-    <!-- Header Navbar: style can be found in header.less -->
-	<nav class="navbar navbar-static-top" role="navigation">
-          <!-- Sidebar toggle button-->
-		<!--<a href="#" class="sidebar-toggle" data-toggle="offcanvas" role="button"><span class="sr-only">Toggle navigation</span></a>//-->
-          <div class="navbar-custom-menu">
+<nav class="navbar navbar-static-top" role="navigation">
+	<div class="navbar-custom-menu">
             <ul class="nav navbar-nav">
-              <!-- Messages: style can be found in dropdown.less-->
               <?php //echo  $this->render( 'topbar_dropdown', ['param'=> 'somevar'] ); ?>
-              <!-- User Account: style can be found in dropdown.less -->
               <li class="dropdown user user-menu">
                 <a href="#" class="dropdown-toggle" data-toggle="dropdown">
-                  <img src="<?php echo Url::base(); ?>/resources/templates/dist/img/user2-160x160.jpg" class="user-image" alt="User Image">
+				<img class="user-image" src="http://www.gravatar.com/avatar/<?php echo md5(strtolower(Yii::$app->user->identity->email));?>" />
                   <span class="hidden-xs">Hello 
 				  <?php if (!Yii::$app->user->isGuest) :?>
-				  <?php  //echo /*Yii::$app->user->identity->first_name.*/' ('.Yii::$app->user->identity->username.')' ?>
+				  <?php  echo ucwords(strtolower(Yii::$app->user->identity->username)); ?>
 				  <?php endif;?>
 				  
 				  </span>
@@ -62,7 +56,7 @@ use yii\helpers\Html;
                     <div class="pull-right">
                       <?= Html::a(
                         'Sign Out', 
-                        ['/site/logout'], 
+                        ['/user/logout'], 
                         [
                           'class'=>'btn btn-default btn-flat',
                           'data-method'=>'post'

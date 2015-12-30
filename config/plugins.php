@@ -2,12 +2,16 @@
 	return [
 		'user' => [
 			'class' => 'dektrium\user\Module',
-			//'controllerMap' => [
-			//	'admin' => [
-					//'class'  => 'app\modules\configurations\users\controllers\UsersController',
-					//'layout' => 'app\views\layouts\main',
-			//	],
-			//],
+			'controllerMap' => [
+				'admin' => [
+					'class'  => 'app\controllers\user\AdminController',
+					'layout' => '../../../../../views/layouts/main',
+				],
+				'security' => [
+					'class'  => 'app\controllers\user\SecurityController',
+					'layout' => '../../../../../views/layouts/login',
+				],
+			],
 			'enableUnconfirmedLogin' => true,
 			'confirmWithin' => 21600,
 			'cost' => 12,
@@ -16,6 +20,9 @@
 		'rbac' => [
 			'class' => 'dektrium\rbac\Module',
 		],
+		'gridview' =>  [
+			'class' => '\kartik\grid\Module'
+		]
 	]
 
 ?>

@@ -1,4 +1,5 @@
 <?php
+$menus = require(__DIR__ . '/static-menus.php');
 
 return [
     'adminEmail' => 'admin@example.com',
@@ -11,12 +12,14 @@ return [
 		'copyright'=>'2014-2015',
 	],
 	'application'=>[
-		'name'=>'Yii Basic Template',
-		'mobile5050'=>'<span class="logo-mini"><b>S</b>MS</span>',
-		'mobilename'=>'<span class="logo-lg"><b>Simple</b>SMS</span>',
+		'name'=>'<strong>Jaya Brother</strong> Finance',
+		'mobile5050'=>'<span class="logo-mini"><b>J</b>BF</span>',
+		'mobilename'=>'<span class="logo-lg"><b>JB</b>Finance</span>',
+		'loginlogo'=>'<b>jayaBrother</b> Finance',
 	],
 	'adminLTE'=>[
 		'showControl'=>FALSE,
-	]
+	],
+	'adminmenus'=>$menus,
 	
 ];
