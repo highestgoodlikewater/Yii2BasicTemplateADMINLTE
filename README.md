@@ -39,7 +39,13 @@ REQUIREMENTS
 
 The minimum requirement by this project template that your Web server supports PHP 5.4.0.
 
-[![Vendor Collection](https://poser.pugx.org/yiisoft/yii2-app-basic/downloads.png)](https://github.com/AsiaWebSolution/yii2GeneralVendor)
+And also download vendor collections at [![Vendor Collection](https://poser.pugx.org/yiisoft/yii2-app-basic/downloads.png)](https://github.com/AsiaWebSolution/yii2GeneralVendor)
+put into this path
+
+~~~
+/yourprojects
+/yii2-vendor <-- this
+~~~
 
 INSTALLATION
 ------------
