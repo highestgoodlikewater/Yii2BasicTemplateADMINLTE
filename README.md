@@ -27,10 +27,10 @@ DIRECTORY STRUCTURE
       vendor/             contains dependent 3rd-party packages
       views/              contains view files for the Web application
       web/                contains the entry script and Web resources
-      resources/        contains the entry script and Web resources
-      modules/             contains application modules
-      migrations/          contains database changes
-      messages/            contains all translations
+      resources/          contains the entry script and Web resources
+      modules/            contains application modules
+      migrations/         contains database changes
+      messages/           contains all translations
 
 
 
