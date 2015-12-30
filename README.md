@@ -17,7 +17,7 @@ DIRECTORY STRUCTURE
 
       assets/             contains assets definition
       commands/           contains console commands (controllers)
-      components/           contains components classes
+      components/     contains components classes
       config/             contains application configurations
       controllers/        contains Web controller classes
       mail/               contains view files for e-mails
@@ -27,10 +27,10 @@ DIRECTORY STRUCTURE
       vendor/             contains dependent 3rd-party packages
       views/              contains view files for the Web application
       web/                contains the entry script and Web resources
-      resources/                contains the entry script and Web resources
-      modules/                contains application modules
-      migrations/                contains database changes
-      messages/                contains all translations
+      resources/        contains the entry script and Web resources
+      modules/          contains application modules
+      migrations/       contains database changes
+      messages/        contains all translations
 
 
 
@@ -47,7 +47,7 @@ INSTALLATION
 ### Install from an Archive File
 
 Extract the archive file downloaded from [yiiframework.com](http://www.yiiframework.com/download/) to
-a directory named `basic` that is directly under the Web root.
+a directory named `yii2basic-template` that is directly under the Web root.
 
 Set cookie validation key in `config/web.php` file to some random secret string:
 
@@ -72,6 +72,7 @@ Make sure that you have properly configured db application component and run the
 
 ~~~
 $ php yii migrate/up --migrationPath=@vendor/dektrium/yii2-user/migrations
+$ php yii migrate/up
 ~~~
 
 
