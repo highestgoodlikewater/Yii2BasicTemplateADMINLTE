@@ -1,3 +1,8 @@
+URL 
+============================
+[![Latest Stable Version](https://poser.pugx.org/yiisoft/yii2-app-basic/v/stable.png)](http://asiawebsolution.github.io/Yii2BasicTemplateADMINLTE/)
+
+
 Yii 2 Basic Project Template
 ============================
 
