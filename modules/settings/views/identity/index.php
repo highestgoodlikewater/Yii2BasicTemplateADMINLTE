@@ -55,12 +55,12 @@ $this->params['breadcrumbs'][] = ['label' => Yii::t('modules', 'Konfigurasi Iden
 				</div>
 				
 				<div class="tab-pane" id="tab_2">
-					<?= $this->render('_pages/vendor',[
-						'author'=>$author,
-						'authorurl'=>$authorurl,
-						'publisher'=>$publisher,
-						'email'=>$email,
-						'url'=>$url,
+					<?= $this->render('_pages/email',[
+						'host'=>$host,
+						'username'=>$username,
+						'password'=>$password,
+						'port'=>$port,
+						'encryption'=>$encryption,
 						'copyright'=>$copyright,
 					]);?>
 				</div>

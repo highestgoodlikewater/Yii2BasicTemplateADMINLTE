@@ -1,3 +1,6 @@
+<?php 
+	use yii\helpers\Html;
+?>
 					<div class="form-group required">
 						<label class="col-sm-2 control-label" for="identity-author"><?php echo Yii::t('settings','Nama'); ?></label>
 						<div class="col-sm-10">

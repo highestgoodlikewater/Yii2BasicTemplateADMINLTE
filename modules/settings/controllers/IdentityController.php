@@ -34,21 +34,43 @@ class IdentityController extends \yii\web\Controller
 		$request = Yii::$app->request;
 		if ($request->post())
 		{
-			echo "<pre>";
-			print_r($request->post());
+			$request = $request->post("Identity");
+			$file = 'config/web.php';
+			$find = "'name'=>'".$request["old_web_name"]."',";
+			$replace = "'name'=>'".$request["web_name"]."',";
+			//file_put_contents($file,str_replace($find,$replace,file_get_contents($file)));
 			$file = 'config/params.php';
-			$find = "'name'=>'".$request->post("old_web_name")."'";
-			$replace = "'name'=>'".$request->post("web_name")."'";
-			file_put_contents($file,str_replace($find,$replace,file_get_contents($file)));
+			$find = array (
+				
+			
+			);
+			
+			//"'name'=>'".$request["old_web_name"]."',";
+			echo
 			die();
 		}
 		
-		$files = array('config/params.php','config/web.php');
+		$files = array('config/params.php','config/web.php','config/components/yii.php','config/modules/plugins.php');
 		$searchfor = array(
+			// email @ config/components/yii.php
+			"host"=>"'host'=>",
+			"username"=>"'username'=>",
+			"password"=>"'password'=>",
+			"port"=>"'port'=>",
+			"encryption"=>"'encryption'=>",
+			// email @ config/modules/plugins.php
+			"sender"=>"'sender'=>",
+			"welcomeSubject"=>"'welcomeSubject'=>",
+			"confirmationSubject"=>"'confirmationSubject'=>",
+			"reconfirmationSubject"=>"'reconfirmationSubject'=>",
+			"recoverySubject"=>"'recoverySubject'=>",
+			// template @ config/web.php
+			"application_name"=>"'name'=>",
+			// template @ config/params.php -> application
 			"loginlogo"=>"'loginlogo'=>",
 			"mobilename"=>"'mobilename'=>",
 			"mobile5050"=>"'mobile5050'=>",
-			"application_name"=>"'name'=>",
+			// template @ config/params.php -> vendor
 			"author"=>"'author'=>",
 			"authorurl"=>"'authorurl'=>",
 			"publisher"=>"'publisher'=>",
