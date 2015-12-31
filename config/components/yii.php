@@ -49,12 +49,12 @@
 			'viewPath' => '@app/mailer',
 			'useFileTransport' => false,
 			'transport' => [
-				'class' => 'Swift_SmtpTransport',
-				'host' => 'smtp.gmail.com',
-				'username' => 'suhendra.yohana@gmail.com',
-				'password' => 'zopqoujzakhgjkco',
-				'port' => '465',
-				'encryption' => 'ssl',
+				'class'=>'Swift_SmtpTransport',
+				'host'=>'smtp.gmail.com',
+				'username'=>'suhendra.yohana@gmail.com',
+				'password'=>'zopqoujzakhgjkco',
+				'port'=>'465',
+				'encryption' =>'ssl',
 			],
         ],
 		

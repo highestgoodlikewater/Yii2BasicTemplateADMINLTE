@@ -2,6 +2,7 @@
 	return [
 		'Konfigurasi Umum'=>'General Settings',
 		'Konfigurasi Vendor'=>'Vendor Settings',
+		'Konfigurasi Email'=>'Email Configurations',
 		'Nama Aplikasi'=>'Application Name',
 		'Nama'=>'Author Name',
 		'Penerbit'=>'Publisher',

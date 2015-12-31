@@ -3,11 +3,11 @@
 		'user' => [
 			'class' => 'dektrium\user\Module',
 			'mailer' => [
-				'sender'                => 'asiawebsolution@gmail.com', // or ['no-reply@myhost.com' => 'Sender name']
-				'welcomeSubject'        => 'Welcome subject',
-				'confirmationSubject'   => 'Confirmation subject',
-				'reconfirmationSubject' => 'Email change subject',
-				'recoverySubject'       => 'Recovery subject',
+				'sender'=>'websolution.asia@gmail.com', // or ['no-reply@myhost.com' => 'Sender name']
+				'welcomeSubject'=>'Welcome subject',
+				'confirmationSubject'=>'Confirmation subject',
+				'reconfirmationSubject'=>'Email change subject',
+				'recoverySubject'=>'Recovery subject',
 			],
 			'controllerMap' => [
 				'admin' => [
@@ -36,7 +36,7 @@
 				// ],
 			],
 			'enableGeneratingPassword' => false, //If this option is set to true, password field on registration page will be hidden and password for user will be generated automatically. Generated password will be 8 characters long and will be sent to user via email.
-			'enableRegistration' => true, //If this option is set to false, users will not be able to register an account. Registration page will throw HttpNotFoundException. However confirmation will continue working and you as an administrator will be able to create an account for user from admin interface.
+			'enableRegistration' => false, //If this option is set to false, users will not be able to register an account. Registration page will throw HttpNotFoundException. However confirmation will continue working and you as an administrator will be able to create an account for user from admin interface.
 			'enableConfirmation' => true, //If this option is set to true, module sends email that contains a confirmation link that user must click to complete registration
 			'enableUnconfirmedLogin' => false, //If this option is to true, users will be able to log in even though they didn't confirm his account.
 			'enablePasswordRecovery' => true, //If this option is to true, users will be able to recovery their forgotten passwords.

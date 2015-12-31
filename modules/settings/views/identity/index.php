@@ -29,20 +29,22 @@ $this->params['breadcrumbs'][] = ['label' => Yii::t('modules', 'Konfigurasi Iden
 			<ul class="nav nav-tabs">
 				<li class="active"><a href="#tab_1" data-toggle="tab"><?php echo Yii::t('settings','Konfigurasi Umum');?></a></li>
 				<li><a href="#tab_2" data-toggle="tab"><?php echo Yii::t('settings','Konfigurasi Vendor');?></a></li>
-				<li class="pull-right"><a href="#" class="text-muted"><i class="fa fa-gear"></i></a></li>
+				<li><a href="#tab_3" data-toggle="tab"><?php echo Yii::t('settings','Konfigurasi Email');?></a></li>
 			</ul>
 			<div class="tab-content">
 				<div class="tab-pane active" id="tab_1">
-					<?= $this->render('_pages/application',[
+					<?php 
+						echo  $this->render('_pages/application',[
 						'application_name'=>$application_name,
 						'mobilename'=>$mobilename,
 						'mobile5050'=>$mobile5050,
 						'loginlogo'=>$loginlogo,
-					]);?>
+					]);
+					?>
 				</div>
 				
 				<div class="tab-pane" id="tab_2">
-					<?= $this->render('_pages/application',[
+					<?= $this->render('_pages/vendor',[
 						'author'=>$author,
 						'authorurl'=>$authorurl,
 						'publisher'=>$publisher,
@@ -53,7 +55,7 @@ $this->params['breadcrumbs'][] = ['label' => Yii::t('modules', 'Konfigurasi Iden
 				</div>
 				
 				<div class="tab-pane" id="tab_2">
-					<?= $this->render('_pages/application',[
+					<?= $this->render('_pages/vendor',[
 						'author'=>$author,
 						'authorurl'=>$authorurl,
 						'publisher'=>$publisher,

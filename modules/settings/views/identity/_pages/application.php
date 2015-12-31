@@ -1,7 +1,12 @@
+<?php 
+	use yii\helpers\Html;
+
+?>
 					<div class="form-group required">
 						<label class="col-sm-2 control-label" for="identity-application_name"><?php echo Yii::t('settings','Nama Aplikasi'); ?></label>
 						<div class="col-sm-10">
 							<input value="<?php echo $application_name;?>" type="text" id="identity-application_name" class="form-control" name="Identity[web_name]">
+							<input value="<?php echo $application_name;?>" type="text" id="identity-application_name" class="form-control" name="Identity[old_web_name]">
 						</div>
 					</div>
 					<div class="form-group required">

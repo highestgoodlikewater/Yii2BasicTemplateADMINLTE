@@ -29,7 +29,9 @@ LoginAsset::register($this);
         </div><!-- /.login-logo -->
         <div class="login-box-body">
             <p class="login-box-msg">
-			Sign in to start your session
+			<div class="alert alert-danger alert-dismissable">
+			<h4><i class="icon fa fa-ban"></i> <?= Html::encode($this->title) ?></h4>
+			</div>
 			</p>
             <?= $content ?>
         </div>

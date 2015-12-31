@@ -21,25 +21,21 @@ use yii\widgets\ActiveForm;
 $this->title = Yii::t('user', 'Recover your password');
 $this->params['breadcrumbs'][] = $this->title;
 ?>
-<div class="row">
-    <div class="col-md-4 col-md-offset-4">
-        <div class="panel panel-default">
-            <div class="panel-heading">
-                <h3 class="panel-title"><?= Html::encode($this->title) ?></h3>
-            </div>
-            <div class="panel-body">
-                <?php $form = ActiveForm::begin([
+
+<?php $form = ActiveForm::begin([
                     'id'                     => 'password-recovery-form',
                     'enableAjaxValidation'   => true,
                     'enableClientValidation' => false,
                 ]); ?>
-
+<div class="form-group has-feedback">
                 <?= $form->field($model, 'email')->textInput(['autofocus' => true]) ?>
+</div>
 
+<div class="row">
+    <div class="col-xs-12 pull-right" >
                 <?= Html::submitButton(Yii::t('user', 'Continue'), ['class' => 'btn btn-primary btn-block']) ?><br>
+</div>
+</div>
 
                 <?php ActiveForm::end(); ?>
-            </div>
-        </div>
-    </div>
-</div>
+

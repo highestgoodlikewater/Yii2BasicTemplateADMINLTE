@@ -31,6 +31,18 @@ class IdentityController extends \yii\web\Controller
 	
     public function actionIndex()
     {
+		$request = Yii::$app->request;
+		if ($request->post())
+		{
+			echo "<pre>";
+			print_r($request->post());
+			$file = 'config/params.php';
+			$find = "'name'=>'".$request->post("old_web_name")."'";
+			$replace = "'name'=>'".$request->post("web_name")."'";
+			file_put_contents($file,str_replace($find,$replace,file_get_contents($file)));
+			die();
+		}
+		
 		$files = array('config/params.php','config/web.php');
 		$searchfor = array(
 			"loginlogo"=>"'loginlogo'=>",
@@ -62,6 +74,9 @@ class IdentityController extends \yii\web\Controller
 			}
 		}
 		
+		// echo "<pre>";
+		// print_r($options);
+		// exit;
 		Url::remember();
         return $this->render('index',$options);
     }
