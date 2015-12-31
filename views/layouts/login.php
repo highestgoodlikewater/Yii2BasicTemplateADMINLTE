@@ -30,7 +30,6 @@ LoginAsset::register($this);
         <div class="login-box-body">
             <p class="login-box-msg">
 			Sign in to start your session
-            <?= Alert::widget() ?>
 			</p>
             <?= $content ?>
         </div>

@@ -19,13 +19,13 @@ use yii\web\View;
  * @var string 	$content
  */
 ?>
-<?= $this->render( '@app/views/layouts/_title', Yii::$app->controller->_pagetitle ); ?>
+<?= $this->render( '@app/views/layouts/_modules/_title', Yii::$app->controller->_pagetitle ); ?>
 <?= $this->render('/_alert', [
     'module' => Yii::$app->getModule('user'),
 ]) ?>
 
 <div class="box box-primary">
-	<?php echo $this->render('@app/views/layouts/_menu-crud',['title'=>'Edit Pengguna','buttons'=>Yii::$app->controller->_buttons]); ?>
+	<?php echo $this->render('@app/views/layouts/_modules/_menu-crud',['title'=>'Edit Pengguna','buttons'=>Yii::$app->controller->_buttons]); ?>
 	<div class="box-body">
 		<div class="col-md-3">
 			<div class="panel panel-default">

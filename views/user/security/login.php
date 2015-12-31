@@ -35,6 +35,7 @@ $this->params['breadcrumbs'][] = '';
 ]) ?>
 
 <div class="form-group has-feedback">
+<?php $model->login='suhendra'; ?>
 	<?= $form->field($model, 'login', 
 		[
 			'inputOptions' => ['autofocus' => 'autofocus', 'class' => 'form-control', 'tabindex' => '1'],
@@ -42,7 +43,8 @@ $this->params['breadcrumbs'][] = '';
 		])->textInput(['class'=>'form-control','placeholder'=>'some@email.you / username']); ?>
 </div>
 <div class="form-group has-feedback">
-        <?= $form->field($model, 'password',[
+        <?php $model->password='123456'; ?>
+		<?= $form->field($model, 'password',[
             'template'=>'{input}<span class="glyphicon glyphicon-lock form-control-feedback"></span>'
         ])->passwordInput(['class'=>'form-control','placeholder'=>'Your Password']) ?>
 </div>

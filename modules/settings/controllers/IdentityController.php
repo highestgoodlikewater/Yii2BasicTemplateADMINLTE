@@ -7,6 +7,7 @@ use yii\filters\VerbFilter;
 use yii\web\NotFoundHttpException;
 use yii\web\ForbiddenHttpException;
 use yii\data\ActiveDataProvider;
+use yii\helpers\Url;
 
 class IdentityController extends \yii\web\Controller
 {
@@ -22,15 +23,15 @@ class IdentityController extends \yii\web\Controller
 			// array ('title'=>'Hapus','link'=>'#','class'=>'danger','id' => 'deleteAll','rule'=>'admin'),
 		);
 		$this->_pagetitle = array(
-			'_title'=> 'Data Master :: Karyawan '.Yii::$app->params['application']['name'],
-			'_breadcrumbs'=> '',
-			'_module'=> Yii::$app->awscomponent->string_ucfirst('Manajemen Karyawan'),
-			'_subModule'=> '',
+			'_title'=> 'Konfigurasi Identitas Aplikasi',
+			'_module'=> Yii::$app->awscomponent->string_ucfirst('Konfigurasi Identitas Aplikasi'),
+			'_subModule'=> 'Pengaturan Aplikasi',
 		);
 	}
 	
     public function actionIndex()
     {
+		Url::remember();
         return $this->render('index');
     }
 

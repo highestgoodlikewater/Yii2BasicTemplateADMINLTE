@@ -28,28 +28,22 @@ DashboardAsset::register($this);
 		<?php $this->beginBody() ?>
 		<div class="wrapper">
 			<header class="main-header">
-				<?= $this->render( 'header', ['param'=> 'somevar'] ); ?>
+				<?= $this->render( '_includes/header', ['param'=> 'somevar'] ); ?>
 			</header>
 
 			<?php if (!Yii::$app->user->isGuest) :?>
 			<aside class="main-sidebar">
-				<?= $this->render( 'sidebar-static', ['adminmenus'=>Yii::$app->params['adminmenus']] ); ?>
+				<?= $this->render( '_includes/sidebar-static', ['adminmenus'=>Yii::$app->params['adminmenus']] ); ?>
 			</aside>
 			<?php endif;?>
 			<div class="content-wrapper">
 				<section class="content-header">
-					<?php 
-					//$this->params['breadcrumbs'][] = ['label' => Yii::t('app', 'Bukutamus'), 'url' => ['index']];
-					//$this->params['breadcrumbs'][] = ['label' => 'Module Name', 'url' => ['view', 'id' => 1]];
-					//$this->params['breadcrumbs'][] = ['label' => '<i class="fa fa-dashboard"></i> Dashboard'];
-					
-					?>
 					<?= Breadcrumbs::widget([
 							'homeLink'=>isset($this->params['breadcrumbs']) ? ['label' => '<strong>You are at : </strong> Dashboard','url'=>['/']] : false,
 							'options'=>['class' => 'breadcrumb'],
 							'encodeLabels'=>false,
 							'links' => isset($this->params['breadcrumbs']) ? $this->params['breadcrumbs'] : ['<strong>Welcome dude, today is '. date('d M Y').'</strong>'],
-        ]) ?>
+					]) ?>
 		        	<h1>
 						<?php echo (isset($this->params['_title'])?$this->params['_title']:Yii::$app->params['application']['name']) ?>
 						<small><?php echo (isset($this->params['_subtitle'])?$this->params['_subtitle']:'') ?></small>
@@ -83,7 +77,7 @@ DashboardAsset::register($this);
 				</section>
 			</div>
 			
-			<?php echo $this->render( 'footer-copyright', ['info'=> Yii::$app->params['vendor']] ); ?>
+			<?php echo $this->render( '_includes/footer-copyright', ['info'=> Yii::$app->params['vendor']] ); ?>
 			<?php //echo $this->render( 'rightsidebar', ['param'=> 'somevar'] ); ?>
 		</div>
 		<?php $this->endBody() ?>
