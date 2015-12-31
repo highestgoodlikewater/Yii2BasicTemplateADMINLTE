@@ -33,3 +33,8 @@ ul.dropdown-menu li div.slimScrollDiv
 , li.dropdown.notifications-menu ul.dropdown-menu li ul.menu{
 	 height: 100% !important;
 }
+
+.help-block.has-error {
+    color: red;
+    font-size: 12px;
+}

@@ -12,7 +12,7 @@ return [
 		'authorurl'=>'javascript:void(0)',
 		'publisher'=>'Asia Web Solution',
 		'email'=>'suhendra.yohana@gmail.com',
-		'url'=>'http://asiawebsolution.com/',
+		'url'=>'http://google.com/',
 		'copyright'=>'2014-2015',
 	],
 	'application'=>[

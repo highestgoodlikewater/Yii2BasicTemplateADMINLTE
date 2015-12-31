@@ -36,7 +36,7 @@ $action = Yii::$app->controller->action->id;
 		?>
 		<li <?php echo $classActive?>>
 			<a href="<?php echo ($menu['menu_url'] == '#' ? 'javascript:void(0)' : $menu['menu_url']) ?>">
-				<i class="<?php echo $menu['menu_icon'] ?>"></i><span><?php echo $menu["menu_title"] ?> </span><?php echo MENU_PULL_RIGHT?>
+				<i class="<?php echo $menu['menu_icon'] ?>"></i><span><?php echo Yii::t('menu',$menu["menu_title"]); ?> </span><?php echo MENU_PULL_RIGHT?>
 			</a>
 			<?php 
 				$classActive = '';
@@ -119,7 +119,7 @@ $action = Yii::$app->controller->action->id;
 			}
 		?>
 			<a class="<?php echo $firstchildMenu['menu_parent'];?>" href="<?php echo Url::home().$companyLink; ?>">
-				<i class="<?php echo $firstchildMenu["menu_icon"] ?>"></i><?php echo $firstchildMenu["parent_menu_name"] ?>
+				<i class="<?php echo $firstchildMenu["menu_icon"] ?>"></i><?php echo Yii::t('menu',$firstchildMenu["parent_menu_name"]); ?>
 				<?php if (sizeof ($firstchildMenu['submenu'])) echo MENU_PULL_RIGHT; ?>
 			</a>
 			<?php if (!empty($firstchildMenu["submenu"])): ?>
@@ -135,7 +135,7 @@ $action = Yii::$app->controller->action->id;
 					<li <?php echo $classActive;?> >
 						<a href="<?php echo $links ?>">
 							<i class="<?php echo $secondchildMenu["menu_icon"] ?>"></i>
-							<?php echo $secondchildMenu["name"] ?>
+							<?php echo Yii::t('menu',$secondchildMenu["name"]); ?> 
 							<?php if (sizeof ($secondchildMenu['submenu'])) echo MENU_PULL_RIGHT; ?> 
 						</a>
                                           <?php if (!empty($secondchildMenu["submenu"])): ?>
@@ -149,7 +149,7 @@ $action = Yii::$app->controller->action->id;
 													$classActive =  ($thirdchildMenu['menu_id'] == $controllers_name ? 'class="active"' : '');
 												?>
                                               <li  <?php echo $classActive;?>>
-                                                  <a href="<?php echo $links; ?>"><i class="<?php echo $thirdchildMenu["menu_icon"] ?>"></i> <?php echo $thirdchildMenu["name"] ?></a>
+                                                  <a href="<?php echo $links; ?>"><i class="<?php echo $thirdchildMenu["menu_icon"] ?>"></i> <?php echo Yii::t('menu',$thirdchildMenu["name"]); ?> </a>
                                               </li>
                                         <?php endforeach; ?>
                                         </ul>
