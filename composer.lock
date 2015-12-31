@@ -4,7 +4,7 @@
         "Read more about it at https://getcomposer.org/doc/01-basic-usage.md#composer-lock-the-lock-file",
         "This file is @generated automatically"
     ],
-    "hash": "17fa23cf82e12a9b98e4284a0a51d622",
+    "hash": "8ad659284e27bc386fe64c02c5dff205",
     "content-hash": "eb63260cf92de8f759073361c325fc5e",
     "packages": [
         {
@@ -890,12 +890,12 @@
             "source": {
                 "type": "git",
                 "url": "https://github.com/kartik-v/yii2-editable.git",
-                "reference": "7c25b5bb6b21027eaf11b6ee4bba5c9f00cf04cd"
+                "reference": "b228ad92a4faa65e596b9609b5aaf567fb2b5211"
             },
             "dist": {
                 "type": "zip",
-                "url": "https://api.github.com/repos/kartik-v/yii2-editable/zipball/7c25b5bb6b21027eaf11b6ee4bba5c9f00cf04cd",
-                "reference": "7c25b5bb6b21027eaf11b6ee4bba5c9f00cf04cd",
+                "url": "https://api.github.com/repos/kartik-v/yii2-editable/zipball/b228ad92a4faa65e596b9609b5aaf567fb2b5211",
+                "reference": "b228ad92a4faa65e596b9609b5aaf567fb2b5211",
                 "shasum": ""
             },
             "require": {
@@ -930,7 +930,7 @@
                 "popover-x",
                 "widget"
             ],
-            "time": "2015-12-27 16:31:06"
+            "time": "2015-12-31 03:43:04"
         },
         {
             "name": "kartik-v/yii2-grid",

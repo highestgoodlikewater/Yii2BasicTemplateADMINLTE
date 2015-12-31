@@ -31,8 +31,39 @@ class IdentityController extends \yii\web\Controller
 	
     public function actionIndex()
     {
+		$files = array('config/params.php','config/web.php');
+		$searchfor = array(
+			"loginlogo"=>"'loginlogo'=>",
+			"mobilename"=>"'mobilename'=>",
+			"mobile5050"=>"'mobile5050'=>",
+			"application_name"=>"'name'=>",
+			"author"=>"'author'=>",
+			"authorurl"=>"'authorurl'=>",
+			"publisher"=>"'publisher'=>",
+			"email"=>"'email'=>",
+			"url"=>"'url'=>",
+			"copyright"=>"'copyright'=>",
+		);
+		$options = array();
+		header('Content-Type: text/plain');
+		foreach ($files as $file)
+		{
+			$contents = file_get_contents($file);
+			foreach ($searchfor as $k=>$search)
+			{
+				$pattern = preg_quote($search, '/');
+				$pattern = "/^.*$pattern.*\$/m";
+				if(preg_match_all($pattern, $contents, $matches)){
+					$value = explode ("=>",implode("\n", $matches[0]));
+					$strLength = strlen($value[1]);
+					$value = substr($value[1],1,($strLength-4));
+					$options = array_merge($options,array($k=>$value));
+				}	
+			}
+		}
+		
 		Url::remember();
-        return $this->render('index');
+        return $this->render('index',$options);
     }
 
 }

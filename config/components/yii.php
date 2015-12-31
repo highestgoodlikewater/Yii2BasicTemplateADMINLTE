@@ -2,23 +2,35 @@
 	return [
 		'i18n' => [
 			'translations' => [
-				//'app' => [
 				'*' => [
 					'class' => 'yii\i18n\PhpMessageSource',
 					'basePath' => '@app/messages',
 					'sourceLanguage' => 'id',
 					'fileMap'=>[
 						'app'=>'app.php',
-						'plugins'=>'plugins.php',
 						'app/error'=>'error.php',
 					],
 					'on missingTranslation' => ['app\components\AWS\CheckLanguages', 'handleMissingTranslation']
 				],
+				'user*' => [
+                    'class' => 'yii\i18n\PhpMessageSource',
+                    'basePath' => '@app/messages', // my custom message path.
+                    'sourceLanguage' => 'id',
+                    'fileMap' => [
+                        'user' => 'user.php',
+                    ],
+                ],
+				'yii*' => [
+                    'class' => 'yii\i18n\PhpMessageSource',
+                    'basePath' => '@app/messages', // my custom message path.
+                    'sourceLanguage' => 'id',
+                    'fileMap' => [
+                        'user' => 'yii.php',
+                    ],
+                ]
 			],
 		],
-		'authManager' => [
-              'class' => 'yii\rbac\DbManager', // or use 'yii\rbac\PhpManager'
-		],
+
 		'urlManager' => [
 			'enablePrettyUrl' => TRUE,
 			'showScriptName' => FALSE,
@@ -35,7 +47,7 @@
         'mailer' => [
             'class' => 'yii\swiftmailer\Mailer',
 			'viewPath' => '@app/mailer',
-			'useFileTransport' => FALSE,
+			'useFileTransport' => false,
 			'transport' => [
 				'class' => 'Swift_SmtpTransport',
 				'host' => 'smtp.gmail.com',
