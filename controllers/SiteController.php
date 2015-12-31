@@ -50,6 +50,7 @@ class SiteController extends Controller
 
     public function actionIndex()
     {
+		$this->view->title = 'Dashboard';
 		$db = \Yii::$app->db;
 		$start = date("Y-m-01");
 		$end = date("Y-m-t");

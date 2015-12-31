@@ -5,12 +5,20 @@
 			'controllerMap' => [
 				'admin' => [
 					'class'  => 'app\controllers\user\AdminController',
-					'layout' => '../../../../../views/layouts/main',
+					'layout' => '../../../../../yii2basic-template/views/layouts/main',
 				],
 				'security' => [
 					'class'  => 'app\controllers\user\SecurityController',
-					'layout' => '../../../../../views/layouts/login',
+					'layout' => '../../../../../yii2basic-template/views/layouts/login',
 				],
+				// 'admin' => [
+					// 'class'  => 'app\controllers\user\AdminController',
+					// 'layout' => '../../../../../views/layouts/main',
+				// ],
+				// 'security' => [
+					// 'class'  => 'app\controllers\user\SecurityController',
+					// 'layout' => '../../../../../views/layouts/login',
+				// ],
 			],
 			'enableUnconfirmedLogin' => true,
 			'confirmWithin' => 21600,

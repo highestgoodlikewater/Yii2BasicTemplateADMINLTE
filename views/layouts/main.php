@@ -45,7 +45,7 @@ DashboardAsset::register($this);
 					
 					?>
 					<?= Breadcrumbs::widget([
-							'homeLink'=>isset($this->params['breadcrumbs']) ? ['label' => '<strong>You are at : </strong> Dashboard'] : false,
+							'homeLink'=>isset($this->params['breadcrumbs']) ? ['label' => '<strong>You are at : </strong> Dashboard','url'=>['/']] : false,
 							'options'=>['class' => 'breadcrumb'],
 							'encodeLabels'=>false,
 							'links' => isset($this->params['breadcrumbs']) ? $this->params['breadcrumbs'] : ['<strong>Welcome dude, today is '. date('d M Y').'</strong>'],

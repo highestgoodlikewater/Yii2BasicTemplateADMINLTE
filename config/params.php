@@ -16,10 +16,10 @@ return [
 		'copyright'=>'2014-2015',
 	],
 	'application'=>[
-		'name'=>'<strong>Jaya Brother</strong> Finance',
-		'mobile5050'=>'<span class="logo-mini"><b>J</b>BF</span>',
-		'mobilename'=>'<span class="logo-lg"><b>JB</b>Finance</span>',
-		'loginlogo'=>'<b>jayaBrother</b> Finance',
+		'name'=>'<strong>Yii2 Basic</strong> Template',
+		'mobile5050'=>'<span class="logo-mini"><b>A</b>WS</span>',
+		'mobilename'=>'<span class="logo-lg"><b>Yii2</b>Basic</span>',
+		'loginlogo'=>'<strong>Yii2 Basic</strong> Template',
 	],
 	'adminLTE'=>[
 		'showControl'=>FALSE,
