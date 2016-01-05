@@ -3,7 +3,6 @@
 		'user' => [
 			'class' => 'dektrium\user\Module',
 			'mailer' => [
-				'sender'=>'websolution.asia@gmail.com', // or ['no-reply@myhost.com' => 'Sender name']
 				'welcomeSubject'=>'Welcome subject',
 				'confirmationSubject'=>'Confirmation subject',
 				'reconfirmationSubject'=>'Email change subject',
@@ -43,6 +42,9 @@
 			'confirmWithin' => 21600,
 			'cost' => 12,
 			'admins' => ['suhendra']
+        ],
+		'seomanager' => [
+            'class' => 'julianb90\seomanager\Module',
         ],
 		'authManager' => [
               'class' => 'yii\rbac\DbManager', // or use 'yii\rbac\PhpManager'

@@ -27,7 +27,13 @@
                     'fileMap' => [
                         'user' => 'yii.php',
                     ],
-                ]
+                ],
+				'daysago*' => [
+					'class' => 'yii\i18n\PhpMessageSource',
+					'basePath' => '@app/messages', // my custom message path.
+					'sourceLanguage' => 'en',
+					//'sourceLanguage' => 'en-US',
+				],
 			],
 		],
 
@@ -46,7 +52,7 @@
         ],
         'mailer' => [
             'class' => 'yii\swiftmailer\Mailer',
-			'viewPath' => '@app/mailer',
+			'viewPath' => '@app/mail',
 			'useFileTransport' => false,
 			'transport' => [
 				'class'=>'Swift_SmtpTransport',
@@ -54,7 +60,7 @@
 				'username'=>'suhendra.yohana@gmail.com',
 				'password'=>'zopqoujzakhgjkco',
 				'port'=>'465',
-				'encryption' =>'ssl',
+				'encryption'=>'ssl',
 			],
         ],
 		

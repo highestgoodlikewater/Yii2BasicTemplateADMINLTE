@@ -6,6 +6,7 @@ $config = [
     'name'=>'AWS Yii2 Basic Template',
     'basePath' => dirname(__DIR__),
 	'vendorPath' => '../yii2-vendor',
+    //'bootstrap' => ['log','assetsAutoCompress'],
     'bootstrap' => ['log'],
 	'language'=>'id',
 	'sourceLanguage'=>'id',

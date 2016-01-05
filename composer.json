@@ -31,7 +31,12 @@
 		"ibrarturi/yii2-latlng-finder": "dev-master",
 		"julian-b90/yii2-seomanager": "*",
 		"sfedosimov/yii2-daysago": "*",
-		"giovdk21/yii2-syntaxhighlighter": "dev-master"
+		"giovdk21/yii2-syntaxhighlighter": "dev-master",
+		"moonlandsoft/yii2-phpexcel": "*",
+		"imanilchaudhari/yii2-currency-converter": "dev-master",
+		"skeeks/yii2-mobile-detect": "*",
+		"drsdre/yii2-xmlsoccer": "*",
+		"skeeks/yii2-assets-auto-compress": "*"
     },
 	"repositories": [
 		{

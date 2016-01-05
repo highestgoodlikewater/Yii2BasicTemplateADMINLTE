@@ -6,7 +6,9 @@ use yii\widgets\ActiveForm;
 <?php
 $this->params['breadcrumbs'][] = ['label' => Yii::t('app', 'Pengaturan'),'url'=>['/settings']];
 $this->params['breadcrumbs'][] = ['label' => Yii::t('modules', 'Konfigurasi Identitas Aplikasi')];
-//$this->params['breadcrumbs'][] = $this->title;
+use app\assets\SettingsAsset;
+SettingsAsset::register($this);
+
 ?>
 
 <?= $this->render( '@app/views/layouts/_modules/_title', Yii::$app->controller->_pagetitle ); ?>
@@ -27,12 +29,12 @@ $this->params['breadcrumbs'][] = ['label' => Yii::t('modules', 'Konfigurasi Iden
 
 		<div class="nav-tabs-custom">
 			<ul class="nav nav-tabs">
-				<li class="active"><a href="#tab_1" data-toggle="tab"><?php echo Yii::t('settings','Konfigurasi Umum');?></a></li>
+				<li ><a href="#tab_1" data-toggle="tab"><?php echo Yii::t('settings','Konfigurasi Umum');?></a></li>
 				<li><a href="#tab_2" data-toggle="tab"><?php echo Yii::t('settings','Konfigurasi Vendor');?></a></li>
-				<li><a href="#tab_3" data-toggle="tab"><?php echo Yii::t('settings','Konfigurasi Email');?></a></li>
+				<li class="active"><a href="#tab_3" data-toggle="tab"><?php echo Yii::t('settings','Konfigurasi Email');?></a></li>
 			</ul>
 			<div class="tab-content">
-				<div class="tab-pane active" id="tab_1">
+				<div class="tab-pane " id="tab_1">
 					<?php 
 						echo  $this->render('_pages/application',[
 						'application_name'=>$application_name,
@@ -54,7 +56,7 @@ $this->params['breadcrumbs'][] = ['label' => Yii::t('modules', 'Konfigurasi Iden
 					]);?>
 				</div>
 				
-				<div class="tab-pane" id="tab_2">
+				<div class="tab-pane active" id="tab_3">
 					<?= $this->render('_pages/email',[
 						'host'=>$host,
 						'username'=>$username,
@@ -62,6 +64,11 @@ $this->params['breadcrumbs'][] = ['label' => Yii::t('modules', 'Konfigurasi Iden
 						'port'=>$port,
 						'encryption'=>$encryption,
 						'copyright'=>$copyright,
+						'sender'=>$sender,
+						'welcomeSubject'=>$welcomeSubject,
+						'confirmationSubject'=>$confirmationSubject,
+						'reconfirmationSubject'=>$reconfirmationSubject,
+						'recoverySubject'=>$recoverySubject,
 					]);?>
 				</div>
 				

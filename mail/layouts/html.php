@@ -15,7 +15,8 @@ use yii\helpers\Html;
 </head>
 <body>
     <?php $this->beginBody() ?>
-    <?= $content ?>
+	This is Email Introduction <br/>
+	<?= $content ?>
     <?php $this->endBody() ?>
 </body>
 </html>

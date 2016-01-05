@@ -8,6 +8,7 @@ use yii\web\NotFoundHttpException;
 use yii\web\ForbiddenHttpException;
 use yii\data\ActiveDataProvider;
 use yii\helpers\Url;
+use app\components\AWS\Email as MyMailer;
 
 class IdentityController extends \yii\web\Controller
 {
@@ -29,22 +30,74 @@ class IdentityController extends \yii\web\Controller
 		);
 	}
 	
+    public function actionSendemail(){
+		$mail = new MyMailer();
+		$mail->layout = 'tests/_emailcontent';
+		$mail->content = $_POST["msg"];
+		$mail->from = Yii::$app->appinfo->t('admin_email');
+		$mail->name = Yii::$app->appinfo->t('admin_name');
+		$mail->subject = $_POST["subject"];
+		$mail->destination = $_POST["to"];
+		echo $mail->send();
+	}
     public function actionIndex()
     {
 		$request = Yii::$app->request;
 		if ($request->post())
 		{
 			$request = $request->post("Identity");
-			$file = 'config/web.php';
-			$find = "'name'=>'".$request["old_web_name"]."',";
-			$replace = "'name'=>'".$request["web_name"]."',";
-			//file_put_contents($file,str_replace($find,$replace,file_get_contents($file)));
+			echo "<pre>";
+			
+			$files = array(
+				array (
+					'files' =>'config/params.php',
+					'find'=> array (
+						"'adminEmail'=>'".$request["old_email_sender"]."'",
+					),
+					'replace'=> array (
+						"'adminEmail'=>'".$request["email_sender"]."'",
+					),
+				),array (
+					'files' =>'config/web.php',
+					'find'=>array(
+						 "'name'=>'".$request["old_application_name"]."'",
+					),
+					'replace'=>array(
+						 "'name'=>'".$request["application_name"]."'",
+					),
+				),array (
+					'files' =>'config/components/yii.php',
+					'find'=>array(),
+					'replace'=>array(),
+				),array (
+					'files' =>'config/modules/plugins.php',
+					'find'=>array(),
+					'replace'=>array(),
+				));
+			foreach ($files as $k=>$file)
+			{
+				echo $file["files"].''.sizeof($file["find"])."<br/>";
+				if (sizeof($file["find"])>0)
+				{
+					file_put_contents($file["files"],str_replace($file["find"],$file["replace"],file_get_contents($file["files"])));
+				}
+			}
+			print_r($request);
+			die();
 			$file = 'config/params.php';
 			$find = array (
-				
-			
+				"'adminEmail'=>'".$request["old_email_sender"]."'",
+				"'mobilename'=>'".$request["old_mobilename"]."'",
+				"'mobile5050'=>'".$request["old_mobile5050"]."'",
+				"'loginlogo'=>'".$request["old_loginlogo"]."'",
 			);
-			
+			$replace = array (
+				"'adminEmail'=>'".$request["email_sender"]."'",
+				"'mobilename'=>'".$request["mobilename"]."'",
+				"'mobile5050'=>'".$request["mobile5050"]."'",
+				"'loginlogo'=>'".$request["loginlogo"]."'",
+			);
+			file_put_contents($file,str_replace($find,$replace,file_get_contents($file)));
 			//"'name'=>'".$request["old_web_name"]."',";
 			echo
 			die();
@@ -59,7 +112,6 @@ class IdentityController extends \yii\web\Controller
 			"port"=>"'port'=>",
 			"encryption"=>"'encryption'=>",
 			// email @ config/modules/plugins.php
-			"sender"=>"'sender'=>",
 			"welcomeSubject"=>"'welcomeSubject'=>",
 			"confirmationSubject"=>"'confirmationSubject'=>",
 			"reconfirmationSubject"=>"'reconfirmationSubject'=>",
@@ -71,6 +123,7 @@ class IdentityController extends \yii\web\Controller
 			"mobilename"=>"'mobilename'=>",
 			"mobile5050"=>"'mobile5050'=>",
 			// template @ config/params.php -> vendor
+			"sender"=>"'adminEmail'=>",
 			"author"=>"'author'=>",
 			"authorurl"=>"'authorurl'=>",
 			"publisher"=>"'publisher'=>",
